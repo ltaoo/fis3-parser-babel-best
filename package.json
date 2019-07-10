@@ -1,6 +1,6 @@
 {
   "name": "fis3-parser-babel-best",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "fis3 parser",
   "main": "dist/index.js",
   "scripts": {
@@ -8,6 +8,12 @@
     "build": "yarn run rollup -c rollup.config.js"
   },
   "keywords": ["fis3", "babel"],
+  "homepage": "https://github.com/ltaoo/fis3-parser-babel-best",
+  "bugs": "https://github.com/ltaoo/fis3-parser-babel-best/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ltaoo/fis3-parser-babel-best"
+  },
   "author": "ltaoo",
   "license": "ISC",
   "devDependencies": {
@@ -18,8 +24,7 @@
     "eslint-plugin-import": "^2.17.2",
     "rollup": "^1.16.7",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-uglify": "^6.0.2"
+    "rollup-plugin-node-resolve": "^5.2.0"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0"

@@ -3,6 +3,11 @@ const path = require('path');
 const crypto = require('crypto');
 
 const CACHE_PATH = path.resolve(__dirname, '../.cache');
+try {
+  fs.accessSync(CACHE_PATH);
+} catch (err) {
+  fs.mkdirSync(CACHE_PATH);
+}
 
 /**
  * 根据传入的 secret 特征生成 md5

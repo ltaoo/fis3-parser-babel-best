@@ -1,7 +1,5 @@
 import babel from '@babel/core';
 
-import cache from './cache';
-
 /* eslint-disable no-param-reassign */
 
 /**
@@ -21,12 +19,6 @@ import cache from './cache';
 export default function transform(content, file, conf) {
   if (file.useBabel === false) {
     return content;
-  }
-
-  const md5 = cache.createMd5(content);
-  const cachedContent = cache.getCachedContent(md5);
-  if (cachedContent) {
-    return cachedContent;
   }
 
   // 添加 jsx 的 html 语言能力处理
@@ -61,6 +53,5 @@ export default function transform(content, file, conf) {
     file.extras.derived.push(mapping);
   }
 
-  cache.cacheContent(md5, result.code);
   return result.code;
 }
